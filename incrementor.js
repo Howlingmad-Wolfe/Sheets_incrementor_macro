@@ -1,4 +1,12 @@
 /** @OnlyCurrentDoc */
+// custom menu for this function in Google Sheet Menu
+function onOpen() {
+  var ui = SpreadsheetApp.getUi();
+
+  ui.createMenu('Incremental ')
+    .addItem('Get Total', 'runningTotal')
+    .addToUi();
+}
 
 function runningTotal (){
   var spreadsheet = SpreadsheetApp.getActiveSheet(); // will need to exception handle this in case of null value.
